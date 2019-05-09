@@ -29,13 +29,13 @@ end
 def top_titles
   # get movie titles from movies with scores greater than or equal to 9
   # hint: use 'select' and 'where'
-  Movie.titles#.select.where('score >= 9')
+  Movie.select('id','title').where('score >= 9')
 end
 
 def star_wars
   #display the id, title and year of each Star Wars movie in movies.
   # hint: use 'select' and 'where'
-
+  Movie.select('id','title','yr').where("title LIKE '%Star Wars%'")
 end
 
 

@@ -1,0 +1,19 @@
+load 'meta_corgis.rb'
+snack_box = SnackBox.new
+meta_snacks = MetaCorgiSnacks.new(snack_box, 1)
+meta_snacks.bone # => "Bone: Phoenician rawhide: 20 "
+
+load 'meta_corgis.rb'
+MetaCorgiSnacks.define_snack("bone")
+snack_box = SnackBox.new
+meta_snacks = MetaCorgiSnacks.new(snack_box, 1)
+meta_snacks.bone # => "Bone: Phoenician rawhide: 20 "
+meta_snacks.kibble # => "NoMethodError: undefined method `kibble'...""
+
+
+load 'meta_corgis.rb'
+snack_box = SnackBox.new
+meta_snacks = MetaCorgiSnacks.new(snack_box, 1)
+meta_snacks.bone # => "Bone: Phoenician rawhide: 20 "
+meta_snacks.kibble # => "* Kibble: Delicately braised hamhocks: 33 "
+meta_snacks.treat # => "Treat: Chewy dental sticks: 40 "
