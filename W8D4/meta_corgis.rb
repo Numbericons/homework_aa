@@ -48,6 +48,10 @@ class SnackBox
     @data = data
   end
 
+  def beef
+    'Beefy! Yo! Bro! Ho!'
+  end
+
   def get_bone_info(box_id)
     @data[box_id]["bone"]["info"]
   end
