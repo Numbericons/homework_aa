@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ZMusic</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <html style="
+        background: antiquewhite;
+    ">
+    <h1>! Zmusic Database !</h1>
+    <% if logged_in? %>
+      Welcome back <%= current_user.email %>!
+      <!-- <a href="<%#= %>">Logout</a> -->
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

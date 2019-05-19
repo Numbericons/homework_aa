@@ -1,0 +1,12 @@
+<h1> Go ahead, try to log in. Make my day.</h1>
+
+<form action="<%= session_url %>" method="POST">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+    <label for="session_email">Email</label>
+    <input id="session_email" type='text' name="email">
+
+    <label for="session_password">Password</label>
+    <input id="session_password" type='text' name="password">
+
+    <input type="submit" value="Yeah, yeah. Just log me in.">
+</form>
