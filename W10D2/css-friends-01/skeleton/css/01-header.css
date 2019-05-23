@@ -1,0 +1,26 @@
+/* PHASE 1: Header */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background: #eee;
+}
+
+.header {
+  background: red;
+}
+
+.header-nav {
+    /* float: right; */
+    flex-direction: right;
+}
+
+.header-logo {
+    flex-direction: left;
+    /* float: left; */
+}
+
+.header-ul {
+
+}
