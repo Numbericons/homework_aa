@@ -1,0 +1,78 @@
+function madLib(verb, adjective, noun) {
+    console.log(`We shall ${verb.toUpperCase()} the ${adjective.toUpperCase()} ${noun.toUpperCase()}`);
+}
+
+madLib('chase', 'hairy', 'turkey')
+
+
+function isSubstring(searchString, subString) {
+    return searchString.includes(subString);
+}
+
+isSubstring('catty', 'cat');
+
+function checkBuzz(number) {
+    return number % 2 === 0;
+}
+
+function checkBuzz(number) {
+    bool = number % 3 === 0 || number % 5 === 0;
+    return bool & !(number % 3 === 0 & number % 5 === 0);
+}
+
+function fizzBuzz(array) {
+    const retArr = [];
+    for (let i = 0; i < array.length; i++) {
+        if (checkBuzz(array[i]) === 1) {
+            retArr.push(array[i]);
+        }
+    }
+    return retArr;
+}
+
+x = [1,2,3];
+y = [2,3,5,7,12,15,18,19,20,21]
+
+fizzBuzz(x);
+fizzBuzz(y);
+
+
+function isPrime(numb) {
+    for (let i = 2; i < numb; i++)
+    if (numb % i === 0) {
+        return false
+    }
+    return true
+}
+
+function firstNPrimes(n) {
+    const retArr = [];
+    var i = 2;
+
+    while (retArr.length < n) {
+        if (isPrime(i)) {
+            retArr.push(i);
+        }
+        i++;
+    }
+
+    return retArr;
+}
+
+firstNPrimes(4)
+firstNPrimes(5)
+
+function sumOfNPrimes(n) {
+    var total = 0;
+
+    toSumArr = firstNPrimes(n);
+
+    toSumArr.forEach( number => {
+        total = total + number;
+    });
+
+    return total;
+}
+
+sumOfNPrimes(4)
+sumOfNPrimes(5)
