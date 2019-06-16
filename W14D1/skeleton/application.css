@@ -67,3 +67,7 @@ a {
   display: block;
   margin-bottom: 10px;
 }
+
+.active {
+  font-weight: 700;
+}

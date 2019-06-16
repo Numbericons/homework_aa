@@ -137,6 +137,14 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "blue"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        exact: true,
+        to: "/blue"
+      }, "Blue only"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        to: "/blue/indigo"
+      }, "Add indigo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        path: "/blue/indigo",
+        component: _indigo__WEBPACK_IMPORTED_MODULE_2__["default"]
       }));
     }
   }]);
@@ -273,9 +281,29 @@ function (_React$Component) {
   _createClass(Rainbow, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Rainbow Router!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Rainbow Router!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        to: "/red"
+      }, "Red"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        to: "/green"
+      }, "Green"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        to: "/blue"
+      }, "Blue"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        to: "/violet"
+      }, "Violet"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "rainbow"
-      }));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        path: "/red",
+        component: _red__WEBPACK_IMPORTED_MODULE_2__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        path: "/green",
+        component: _green__WEBPACK_IMPORTED_MODULE_3__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        path: "/blue",
+        component: _blue__WEBPACK_IMPORTED_MODULE_4__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        path: "/violet",
+        component: _violet__WEBPACK_IMPORTED_MODULE_5__["default"]
+      })));
     }
   }]);
 
@@ -340,6 +368,19 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "red"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        exact: true,
+        to: "/red"
+      }, "Red only"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        to: "/red/orange"
+      }, "Add orange"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        to: "/red/yellow"
+      }, "Add yellow"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        path: "/red/orange",
+        component: _orange__WEBPACK_IMPORTED_MODULE_2__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        path: "/red/yellow",
+        component: _yellow__WEBPACK_IMPORTED_MODULE_3__["default"]
       }));
     }
   }]);
@@ -2663,7 +2704,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
           );
           err.name = 'Invariant Violation';
           throw err;
-        } else if ("development" !== 'production' && typeof console !== 'undefined') {
+        } else if ( true && typeof console !== 'undefined') {
           // Old behavior for people using React.PropTypes
           var cacheKey = componentName + ':' + propName;
           if (
@@ -10582,7 +10623,7 @@ function setInitialDOMProperties(tag, domElement, rootContainerElement, nextProp
       // on server rendering (but we *do* want to emit it in SSR).
     } else if (registrationNameModules.hasOwnProperty(propKey)) {
       if (nextProp != null) {
-        if (true && typeof nextProp !== 'function') {
+        if ( true && typeof nextProp !== 'function') {
           warnForInvalidEventListener(propKey, nextProp);
         }
         ensureListeningTo(rootContainerElement, propKey);
@@ -10927,7 +10968,7 @@ function diffProperties(domElement, tag, lastRawProps, nextRawProps, rootContain
     } else if (registrationNameModules.hasOwnProperty(propKey)) {
       if (nextProp != null) {
         // We eagerly listen to this even though we haven't committed yet.
-        if (true && typeof nextProp !== 'function') {
+        if ( true && typeof nextProp !== 'function') {
           warnForInvalidEventListener(propKey, nextProp);
         }
         ensureListeningTo(rootContainerElement, propKey);
@@ -11109,14 +11150,14 @@ function diffHydratedProperties(domElement, tag, rawProps, parentNamespace, root
       // TODO: Should we use domElement.firstChild.nodeValue to compare?
       if (typeof nextProp === 'string') {
         if (domElement.textContent !== nextProp) {
-          if (true && !suppressHydrationWarning) {
+          if ( true && !suppressHydrationWarning) {
             warnForTextDifference(domElement.textContent, nextProp);
           }
           updatePayload = [CHILDREN, nextProp];
         }
       } else if (typeof nextProp === 'number') {
         if (domElement.textContent !== '' + nextProp) {
-          if (true && !suppressHydrationWarning) {
+          if ( true && !suppressHydrationWarning) {
             warnForTextDifference(domElement.textContent, nextProp);
           }
           updatePayload = [CHILDREN, '' + nextProp];
@@ -11124,12 +11165,12 @@ function diffHydratedProperties(domElement, tag, rawProps, parentNamespace, root
       }
     } else if (registrationNameModules.hasOwnProperty(propKey)) {
       if (nextProp != null) {
-        if (true && typeof nextProp !== 'function') {
+        if ( true && typeof nextProp !== 'function') {
           warnForInvalidEventListener(propKey, nextProp);
         }
         ensureListeningTo(rootContainerElement, propKey);
       }
-    } else if (true &&
+    } else if ( true &&
     // Convince Flow we've calculated it (it's DEV-only in this method.)
     typeof isCustomComponentTag === 'boolean') {
       // Validate that the properties correspond to their expected values.
@@ -11920,7 +11961,7 @@ function didNotMatchHydratedContainerTextInstance(parentContainer, textInstance,
 }
 
 function didNotMatchHydratedTextInstance(parentType, parentProps, parentInstance, textInstance, text) {
-  if (true && parentProps[SUPPRESS_HYDRATION_WARNING] !== true) {
+  if ( true && parentProps[SUPPRESS_HYDRATION_WARNING] !== true) {
     warnForUnmatchedText(textInstance, text);
   }
 }
@@ -11936,7 +11977,7 @@ function didNotHydrateContainerInstance(parentContainer, instance) {
 }
 
 function didNotHydrateInstance(parentType, parentProps, parentInstance, instance) {
-  if (true && parentProps[SUPPRESS_HYDRATION_WARNING] !== true) {
+  if ( true && parentProps[SUPPRESS_HYDRATION_WARNING] !== true) {
     if (instance.nodeType === ELEMENT_NODE) {
       warnForDeletedHydratableElement(parentInstance, instance);
     } else {
@@ -11958,13 +11999,13 @@ function didNotFindHydratableContainerTextInstance(parentContainer, text) {
 }
 
 function didNotFindHydratableInstance(parentType, parentProps, parentInstance, type, props) {
-  if (true && parentProps[SUPPRESS_HYDRATION_WARNING] !== true) {
+  if ( true && parentProps[SUPPRESS_HYDRATION_WARNING] !== true) {
     warnForInsertedHydratedElement(parentInstance, type, props);
   }
 }
 
 function didNotFindHydratableTextInstance(parentType, parentProps, parentInstance, text) {
-  if (true && parentProps[SUPPRESS_HYDRATION_WARNING] !== true) {
+  if ( true && parentProps[SUPPRESS_HYDRATION_WARNING] !== true) {
     warnForInsertedHydratedText(parentInstance, text);
   }
 }
@@ -12684,7 +12725,7 @@ function catchErrors(fn) {
     try {
       return fn(arg);
     } catch (err) {
-      if (true && !hasLoggedError) {
+      if ( true && !hasLoggedError) {
         hasLoggedError = true;
         warningWithoutStack$1(false, 'React DevTools encountered an error: %s', err);
       }
@@ -18795,7 +18836,7 @@ var replayUnitOfWork = void 0;
 var isReplayingFailedUnitOfWork = void 0;
 var originalReplayError = void 0;
 var rethrowOriginalError = void 0;
-if (true && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
+if ( true && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
   stashedWorkInProgressProperties = null;
   isReplayingFailedUnitOfWork = false;
   originalReplayError = null;
@@ -19199,7 +19240,7 @@ function commitRoot(root, finishedWork) {
   stopCommitLifeCyclesTimer();
   stopCommitTimer();
   onCommitRoot(finishedWork.stateNode);
-  if (true && ReactFiberInstrumentation_1.debugTool) {
+  if ( true && ReactFiberInstrumentation_1.debugTool) {
     ReactFiberInstrumentation_1.debugTool.onCommitWork(finishedWork);
   }
 
@@ -19361,7 +19402,7 @@ function completeUnitOfWork(workInProgress) {
 
       if (next !== null) {
         stopWorkTimer(workInProgress);
-        if (true && ReactFiberInstrumentation_1.debugTool) {
+        if ( true && ReactFiberInstrumentation_1.debugTool) {
           ReactFiberInstrumentation_1.debugTool.onCompleteWork(workInProgress);
         }
         // If completing this work spawned new work, do that next. We'll come
@@ -19404,7 +19445,7 @@ function completeUnitOfWork(workInProgress) {
         }
       }
 
-      if (true && ReactFiberInstrumentation_1.debugTool) {
+      if ( true && ReactFiberInstrumentation_1.debugTool) {
         ReactFiberInstrumentation_1.debugTool.onCompleteWork(workInProgress);
       }
 
@@ -19443,7 +19484,7 @@ function completeUnitOfWork(workInProgress) {
 
       if (_next !== null) {
         stopWorkTimer(workInProgress);
-        if (true && ReactFiberInstrumentation_1.debugTool) {
+        if ( true && ReactFiberInstrumentation_1.debugTool) {
           ReactFiberInstrumentation_1.debugTool.onCompleteWork(workInProgress);
         }
 
@@ -19474,7 +19515,7 @@ function completeUnitOfWork(workInProgress) {
         returnFiber.effectTag |= Incomplete;
       }
 
-      if (true && ReactFiberInstrumentation_1.debugTool) {
+      if ( true && ReactFiberInstrumentation_1.debugTool) {
         ReactFiberInstrumentation_1.debugTool.onCompleteWork(workInProgress);
       }
 
@@ -19510,7 +19551,7 @@ function performUnitOfWork(workInProgress) {
     setCurrentFiber(workInProgress);
   }
 
-  if (true && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
+  if ( true && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
     stashedWorkInProgressProperties = assignFiberPropertiesInDEV(stashedWorkInProgressProperties, workInProgress);
   }
 
@@ -19540,7 +19581,7 @@ function performUnitOfWork(workInProgress) {
       rethrowOriginalError();
     }
   }
-  if (true && ReactFiberInstrumentation_1.debugTool) {
+  if ( true && ReactFiberInstrumentation_1.debugTool) {
     ReactFiberInstrumentation_1.debugTool.onBeginWork(workInProgress);
   }
 
@@ -19651,7 +19692,7 @@ function renderRoot(root, isYieldy, isExpired) {
         }
 
         var failedUnitOfWork = nextUnitOfWork;
-        if (true && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
+        if ( true && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
           replayUnitOfWork(failedUnitOfWork, thrownValue, isYieldy);
         }
 
@@ -20030,7 +20071,7 @@ function scheduleWork(fiber, expirationTime) {
 
   var root = scheduleWorkToRoot(fiber, expirationTime);
   if (root === null) {
-    if (true && (fiber.tag === ClassComponent || fiber.tag === ClassComponentLazy)) {
+    if ( true && (fiber.tag === ClassComponent || fiber.tag === ClassComponentLazy)) {
       warnAboutUpdateOnUnmounted(fiber);
     }
     return;
