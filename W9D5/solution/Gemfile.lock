@@ -106,10 +106,10 @@ GEM
       nokogiri (~> 1)
       rake
     mini_mime (1.0.1)
-    mini_portile2 (2.8.5)
+    mini_portile2 (2.8.6)
     minitest (5.17.0)
     nio4r (2.5.9)
-    nokogiri (1.16.3)
+    nokogiri (1.16.5)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     pg (1.1.4)
